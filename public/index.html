@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodlinfo Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main id="background-section" class="background-details">
+        <div class="fluid-container pl-3 pr-3">
+            <div class="row">
+                <div class="col-lg-4 main-heading-edit">
+                    <h1 class="main-heading">HODLINFO</h1>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex flex-row justify-content-center">
+                    <div class="dropdown m-2">
+                        <button class="btn dropdown-toggle drop-button" type="button" id="baseCurrency" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          INR
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" value="INR" href="#">INR</a>
+                        </div>
+                      </div>
+                      <div class="dropdown m-2">
+                        <button class="btn dropdown-toggle drop-button" type="button" id="convertCurrency" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          BTC
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">BTC</a>
+                          <a class="dropdown-item"  href="#">USDT</a>
+                          <a class="dropdown-item" href="#">WRX</a>
+                        </div>
+                      </div>
+                      <div class="dropdown m-2">
+                        <button class="btn drop-button" type="button" id="buyCurrency" data-toggle="dropdown">
+                          BUY BTC
+                        </button>
+                        
+                      </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-row justify-content-end mr-0">
+                    <p class="telegram-connect" ><i class="fa-brands fa-telegram"></i> Connect Telegram </p>
+                    <label class="switch toggle-container">
+                        <input type="checkbox" id="toggleSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="price-info">
+            <div class="price-change">
+                <p class="price-percentage">0.2 %</p>
+                <p class="time">5 Mins</p>
+            </div>
+            <div class="price-change">
+                <p class="price-percentage">0.81 %</p>
+                <p class="time">1 Hour</p>
+            </div>
+            <div class="best-price">
+                <p class="best-price-para">Best Price to Trade</p>
+                <h2>₹ 51,86,615</h2>
+                <p class="best-price-para2">Average BTC/INR net price including commission</p>
+            </div>
+            <div class="price-change">
+                <p class="price-percentage">5.94 %</p>
+                <p class="time">1 Day</p>
+            </div>
+            <div class="price-change">
+                <p class="price-percentage">9.25 %</p>
+                <p class="time">7 Days</p>
+            </div>
+        </div>
+        <div class="container p-0">
+            <table id="crypto-table">
+                <thead class="table-headings">
+                    <tr>
+                        <th>Platform</th>
+                        <th>Last Traded Price</th>
+                        <th>Buy Price</th>
+                        <th>Sell Price</th>
+                        <th>Difference</th>
+                        <th>Savings</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-body" style="font-weight: bold; font-size: 25px;"></tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="footer-details">
+        <p class="text-left">copyright reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

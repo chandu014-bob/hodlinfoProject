@@ -41,7 +41,10 @@ async function fetchAndStoreCryptoData() {
       const query = 'INSERT INTO cryptos(name, last_traded_price, buy_price, sell_price, difference, savings) VALUES($1, $2, $3, $4, $5, $6)';
       const values = [name, lastTradedPrice, buyPrice, sellPrice, difference, savings];
       await pool.query(query, values);
+      
     }
+    const result = await pool.query('SELECT * FROM cryptos');
+    console.log(result.rows);
     console.log('Data updated successfully');
   } catch (error) {
     console.error('Error fetching or storing data:', error);
